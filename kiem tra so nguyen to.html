@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isPrime(x) {
+        for (let i = 2; i <=Math.sqrt(x); i++) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let count = 0;
+    let number = 2;
+    while (number < 10000) {
+        if (isPrime(number)) {
+            document.write("so nguyen to thu  " + (count + 1) + "la: " + number + "</br>");
+            count ++;
+            number ++;
+        }else number ++;
+    }
+</script>
+</body>
+</html>
